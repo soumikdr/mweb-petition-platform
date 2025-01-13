@@ -17,7 +17,8 @@ return new class extends Migration {
             $table->text('content');
             $table->string('status', 45)->default('open');
             $table->text('response')->nullable();
-            $table->integer('signature_count')->nullable();
+            $table->integer('signature_count')->nullable()->default(0);
+            $table->longText('signatories')->nullable();
             $table->timestamps();
         });
     }

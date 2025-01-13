@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'dob',
+        'bio_ids_id',
     ];
 
     /**
