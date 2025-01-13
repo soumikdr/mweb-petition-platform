@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->date('dob')->nullable();
+            $table->unsignedBigInteger('bio_ids_id')->nullable();
+            $table->enum('user_type', ['OFFICER', 'PETITIONER'])->default('PETITIONER');
             $table->rememberToken();
             $table->timestamps();
         });
